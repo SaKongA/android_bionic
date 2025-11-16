@@ -345,6 +345,12 @@ cc_library_static {
         "-Wframe-larger-than=66000",
     ],
 
+    product_variables: {
+        enable_resolv_external_dns: {
+            cflags: ["-DENABLE_RESOLV_EXTERNAL_DNS"],
+        },
+    },
+
     local_include_dirs: [
         "dns/include",
         "private",
